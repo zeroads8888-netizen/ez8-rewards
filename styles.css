@@ -10,21 +10,31 @@ body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 50% 1
 .brand img { display: block; width: 100%; height: 100%; object-fit: contain; background: #fff; }
 .hero-content { position: absolute; inset: auto 30px 55px; z-index: 2; display: flex; align-items: center; flex-direction: column; text-align: center; text-shadow: 0 3px 14px rgba(3, 18, 44, .5); }
 .eyebrow { margin: 0 0 15px; color: #f8d875; font-size: 12px; font-weight: 800; letter-spacing: .27em; }
-h1 { max-width: 540px; margin: 0; font-size: clamp(54px, 10vw, 74px); font-weight: 900; letter-spacing: -.055em; line-height: .94; }
+h1 { position: relative; max-width: 540px; margin: 0; padding: 10px 15px 15px; font-size: clamp(54px, 10vw, 74px); font-weight: 900; letter-spacing: -.055em; line-height: .94; filter: drop-shadow(0 15px 18px rgba(0, 10, 31, .42)); transform: perspective(700px) rotateX(2deg); }
+h1::before { position: absolute; z-index: -1; inset: -10px -18px -14px; border-radius: 28px; content: ""; background: radial-gradient(ellipse, rgba(0, 20, 48, .6) 0%, rgba(0, 15, 38, .28) 52%, transparent 76%); filter: blur(5px); }
 h1 .brand-blue {
   color: #42b5e6;
+  background: linear-gradient(180deg, #effcff 0%, #79dbfa 19%, #39afe4 48%, #1684c6 73%, #07518f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
-  -webkit-text-stroke: 2px #063565;
+  -webkit-text-stroke: 1.8px #062d54;
   paint-order: stroke fill;
-  text-shadow: 0 3px 0 #052e59, 0 8px 22px rgba(0, 18, 45, .9);
+  text-shadow: 0 1px 0 #0c6aa7, 0 2px 0 #095f9b, 0 3px 0 #07568e, 0 4px 0 #064b80, 0 5px 0 #043f70, 0 7px 1px #021f3f, 0 12px 16px rgba(0, 10, 32, .92), 0 0 12px rgba(105, 219, 255, .34);
 }
 h1 .brand-x {
   display: inline-block;
   color: #d59a18;
+  background: linear-gradient(145deg, #171006 0%, #60400b 22%, #ffe07a 45%, #d78c06 67%, #110b03 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
-  -webkit-text-stroke: 2px #130d03;
+  -webkit-text-stroke: 1.8px #090603;
   paint-order: stroke fill;
-  text-shadow: 0 2px 0 #050403, 0 0 14px rgba(255, 194, 47, .78);
+  text-shadow: 0 1px 0 #d99a16, 0 2px 0 #a96708, 0 3px 0 #714003, 0 5px 1px #090603, 0 10px 15px rgba(0, 0, 0, .9), 0 0 16px rgba(255, 201, 61, .72);
+  transform: translateY(-2px) scale(.94) rotate(-1deg);
 }
 .hero-cn { margin: 26px 0 12px; color: #ffe083; font-size: 34px; font-weight: 800; }
 .hero-offer { margin: 0 0 24px; color: #e7edf4; font-size: 20px; }
