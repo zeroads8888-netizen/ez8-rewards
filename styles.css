@@ -1,5 +1,6 @@
 :root { font-family: Inter, "Noto Sans SC", system-ui, sans-serif; color: #fff; background: #a7ddf4; font-synthesis: none; }
 * { box-sizing: border-box; }
+.sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 html { min-width: 320px; scroll-behavior: smooth; }
 body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 50% 18%, rgba(255,255,255,.66), transparent 38rem), linear-gradient(90deg, #9bd6f0, #d5f3ff 38%, #d5f3ff 62%, #88ccee); }
 .site-shell { width: min(100%, 600px); min-height: 100vh; margin-inline: auto; overflow: hidden; background: #75c8ec; box-shadow: 0 0 54px rgba(15, 92, 143, .2); }
