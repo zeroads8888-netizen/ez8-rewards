@@ -73,22 +73,26 @@ footer strong { letter-spacing: .14em; }
 @keyframes primaryCtaPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.065); } }
 @keyframes rewardCtaPulse { 0%, 100% { transform: translateX(-50%) scale(1); } 50% { transform: translateX(-50%) scale(1.065); } }
 @media (max-width: 620px) {
-  .hero { min-height: 100svh; max-height: 940px; }
-  .hero-content { inset-inline: 18px; bottom: 8px; }
+  .hero { height: 51svh; min-height: 340px; max-height: 460px; }
+  .hero::after { height: 26%; }
+  .hero-art { object-fit: contain; object-position: center top; }
+  .hero-content { inset-inline: 12px; bottom: 8px; }
   .brand { top: 14px; right: 18px; width: 52px; height: 52px; border-radius: 16px; }
-  h1 { font-size: clamp(48px, 13.5vw, 72px); }
-  .hero-cn { margin-top: 20px; font-size: clamp(27px, 7.3vw, 34px); }
-  .hero-offer { margin-bottom: 12px; font-size: 14px; }
-  .hero-offer strong { font-size: 20px; }
-  .primary-cta, .reward-cta { width: min(148px, 40vw); min-height: 42px; padding: 4px 9px; border-width: 2px; border-radius: 14px; }
+  .hero-cn, .scroll-cue { display: none; }
+  .hero-offer { margin: 0 0 7px; font-size: 13px; line-height: 1.1; }
+  .hero-offer strong { font-size: 19px; }
+  .primary-cta, .reward-cta { width: min(148px, 40vw); min-height: 40px; padding: 4px 9px; border-width: 2px; border-radius: 14px; }
   .primary-cta strong, .reward-cta strong { font-size: 12px; letter-spacing: -.02em; }
   .reward-cta { bottom: 4%; }
-  .benefits { width: calc(100% - 34px); padding: 22px 8px; border-radius: 22px; }
+  .benefits { display: none; }
   .icon { width: 46px; height: 46px; font-size: 25px; }
   .benefits strong { font-size: 12px; }
   .benefits small { font-size: 8px; }
-  .reward-section { min-height: 620px; padding: 76px 17px 86px; }
-  .reward-card { margin-top: 34px; border-radius: 16px; }
-  footer { gap: 14px; padding-inline: 18px; }
+  .reward-section { min-height: 0; padding: 10px 12px 18px; }
+  .section-heading p { margin-bottom: 4px; font-size: 9px; }
+  .section-heading h2 { font-size: clamp(17px, 5.3vw, 21px); line-height: 1.1; white-space: nowrap; }
+  .section-heading strong, .section-heading span, .section-heading small { display: none; }
+  .reward-card { margin-top: 10px; border-radius: 13px; }
+  footer { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .scroll-cue b, .primary-cta, .reward-cta { animation: none; } .primary-cta, .reward-cta, .reward-card { transition: none; } .reward-cta { transform: translateX(-50%); } }
