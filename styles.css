@@ -104,3 +104,14 @@ footer strong { letter-spacing: .14em; }
   footer { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .scroll-cue b, .primary-cta, .reward-cta { animation: none; } .primary-cta, .reward-cta, .reward-card { transition: none; } .reward-cta { transform: translateX(-50%); } }
+
+/* Match the first reward card's layered offer composition. */
+.bonus-image-card .bonus-overlay-copy { top: 9%; left: 7%; width: 43%; text-align: center; }
+.bonus-overlay-copy .bonus-top { text-align: left; margin: 0 0 3%; font-size: clamp(14px,3vw,27px); letter-spacing: .04em; line-height:1.1; }
+.bonus-top small { display:block; font-size:.43em; margin-top:3px; letter-spacing:.08em; }
+.bonus-plaque { padding: 3% 2%; color:#fff; font-size:clamp(10px,2vw,20px); font-weight:900; letter-spacing:.04em; background:linear-gradient(150deg,#124388,#02091d 60%); border:1px solid #ffcf67; clip-path:polygon(5% 0,95% 0,100% 50%,95% 100%,5% 100%,0 50%); box-shadow:inset 0 0 8px #4c83b5; }
+.bonus-divider { display:flex; align-items:center; gap:9%; margin:5% 8% 3%; color:#fff1ad; font-size:clamp(8px,1.5vw,14px); font-weight:800; }
+.bonus-divider::before,.bonus-divider::after { content:''; height:1px; flex:1; background:linear-gradient(90deg,transparent,#d7a235,transparent); }
+.bonus-overlay-copy h3 { font-size:clamp(42px,10vw,98px); line-height:.95; }
+.bonus-overlay-copy h3 span { margin:0 0 3%; font-size:.24em; letter-spacing:.08em; }
+@media(max-width:620px) { .bonus-image-card .bonus-overlay-copy {top:9%;left:7%;width:43%;} .bonus-overlay-copy .bonus-top {font-size:clamp(12px,3.5vw,21px);} .bonus-plaque {font-size:clamp(8px,2.6vw,15px);} .bonus-overlay-copy h3 {font-size:clamp(36px,12vw,69px);} .bonus-overlay-copy h3 span {font-size:.23em;} }
