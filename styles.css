@@ -115,3 +115,16 @@ footer strong { letter-spacing: .14em; }
 .bonus-overlay-copy h3 { font-size:clamp(42px,10vw,98px); line-height:.95; }
 .bonus-overlay-copy h3 span { margin:0 0 3%; font-size:.24em; letter-spacing:.08em; }
 @media(max-width:620px) { .bonus-image-card .bonus-overlay-copy {top:9%;left:7%;width:43%;} .bonus-overlay-copy .bonus-top {font-size:clamp(12px,3.5vw,21px);} .bonus-plaque {font-size:clamp(8px,2.6vw,15px);} .bonus-overlay-copy h3 {font-size:clamp(36px,12vw,69px);} .bonus-overlay-copy h3 span {font-size:.23em;} }
+
+/* Scale the complete offer composition against its card, not the viewport. */
+.bonus-image-card { container-type:inline-size; }
+.bonus-image-card .bonus-overlay-copy { top:9%; left:7%; width:43%; height:65%; display:flex; flex-direction:column; align-items:stretch; text-shadow:0 2px 3px #020715; }
+.bonus-overlay-copy .bonus-top { font-size:4.3cqw; margin:0; height:26%; line-height:1; }
+.bonus-top small { font-size:.4em; margin-top:1cqw; }
+.bonus-plaque { padding:1.6cqw .5cqw; font-size:3cqw; line-height:1.1; white-space:nowrap; flex-shrink:0; }
+.bonus-divider { margin:2cqw 8% 1cqw; font-size:2cqw; line-height:1; }
+.bonus-overlay-copy h3 { margin:0; font-size:12cqw; line-height:.95; letter-spacing:-.055em; white-space:nowrap; }
+.bonus-overlay-copy h3 span { margin:0 0 1cqw; font-size:3cqw; line-height:1; }
+.bonus-image-card .reward-cta { z-index:2; }
+
+#bonus-free-title { font-size:10cqw; }
