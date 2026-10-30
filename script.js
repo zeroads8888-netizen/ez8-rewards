@@ -4,7 +4,7 @@ document.querySelector('.scroll-cue')?.addEventListener('click', (event) => {
   document.querySelector('#reward')?.scrollIntoView({ behavior: 'smooth' });
 });
 
-document.querySelectorAll('.primary-cta, .reward-cta').forEach((button) => {
+document.querySelectorAll('.primary-cta, .reward-cta, .bonus-cta').forEach((button) => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
 
