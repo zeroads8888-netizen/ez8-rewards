@@ -130,7 +130,7 @@ footer strong { letter-spacing: .14em; }
 #bonus-free-title { font-size:10cqw; }
 
 .bonus-overlay-copy h3.art-title {filter:none;text-shadow:none;-webkit-text-stroke:0;}
-.type-art {display:block;width:100%;aspect-ratio:4.5;background-image:url('reward-type-gold.png');background-size:100% 300%;background-repeat:no-repeat;transform:scale(1.23);margin-top:2cqw;}
+.type-art {display:block;width:100%;aspect-ratio:4.5;background-image:url('type-fast.webp');background-size:100% 300%;background-repeat:no-repeat;transform:scale(1.23);margin-top:2cqw;}
 .type-free {background-position:center top;}
 .type-365 {background-position:center center;}
 .type-28 {background-position:center bottom;}
