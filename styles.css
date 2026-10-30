@@ -66,8 +66,8 @@ h1 .brand-x {
 .reward-card img { display: block; width: 100%; height: auto; }
 .bonus-image-card .bonus-overlay-copy { position: absolute; z-index: 1; top: 24%; left: 7.5%; width: 46%; color: #ffe58a; text-shadow: 0 2px 0 #8f5b12, 0 6px 16px rgba(0,0,0,.72); }
 .bonus-overlay-copy p { margin: 0 0 8px; color: #ffe58a; font-size: clamp(9px, 1.2vw, 14px); font-weight: 900; letter-spacing: .18em; }
-.bonus-overlay-copy h3 { margin: 0; color: #ffe88b; font-size: clamp(44px, 7vw, 82px); font-weight: 900; letter-spacing: -.065em; line-height: .88; filter: drop-shadow(0 4px 0 #8c5310) drop-shadow(0 10px 10px rgba(0,0,0,.7)); }
-.bonus-overlay-copy h3 span { display: block; margin-top: 10px; color: #89d8ff; font-size: .19em; font-weight: 900; letter-spacing: .16em; line-height: 1.2; text-shadow: 0 2px 7px #00172f; }
+.bonus-overlay-copy h3 { margin: 0; color: #ffe88b; -webkit-text-fill-color: #ffe88b; -webkit-text-stroke: .7px #fff2b2; font-size: clamp(44px, 7vw, 82px); font-weight: 900; letter-spacing: -.065em; line-height: .88; text-shadow: 0 1px 0 #fff4bd, 0 2px 0 #ffd958, 0 4px 0 #c77d12, 0 6px 0 #70400c; filter: drop-shadow(0 9px 9px rgba(0,0,0,.68)); }
+.bonus-overlay-copy h3 span { display: block; margin-top: 10px; color: #fff2b2; -webkit-text-fill-color: #fff2b2; -webkit-text-stroke: 0; font-size: .19em; font-weight: 900; letter-spacing: .16em; line-height: 1.2; text-shadow: 0 1px 0 #a86612, 0 3px 4px rgba(0,14,34,.8); filter: none; }
 .reward-cta { position: absolute; left: 50%; bottom: 5.5%; animation: rewardCtaPulse 1.55s ease-in-out infinite; }
 .reward-cta:hover { filter: brightness(1.1); }
 .reward-cta:focus-visible { outline: 4px solid #fff; outline-offset: 4px; }
