@@ -4,31 +4,20 @@ document.querySelector('.scroll-cue')?.addEventListener('click', (event) => {
   document.querySelector('#reward')?.scrollIntoView({ behavior: 'smooth' });
 });
 
+// Keep native target="_blank" navigation immediate. The original page stays
+// open so Pixel can finish sending without a navigation timer.
 document.querySelectorAll('.primary-cta, .reward-cta, .bonus-cta').forEach((button) => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const destination = button.href;
-    const newTab = window.open('', '_blank');
-
-    if (newTab) {
-      newTab.document.title = '正在前往 EZ8…';
-      newTab.document.body.innerHTML = '<p style="font:600 16px system-ui;text-align:center;margin-top:18vh;color:#123b63">正在为你打开 EZ8…</p>';
-    }
-
-    if (typeof window.fbq === 'function') {
-      window.fbq('track', 'CompleteRegistration', {
-        content_name: 'EZ8 New User Registration',
-        status: true
-      });
-    }
-
-    window.setTimeout(() => {
-      if (newTab && !newTab.closed) {
-        newTab.location.replace(destination);
-      } else {
-        window.location.href = destination;
+  button.addEventListener('click', () => {
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'CompleteRegistration', {
+          content_name: 'EZ8 New User Registration',
+          status: true
+        });
       }
-    }, 1500);
+    } catch (error) {
+      // Analytics errors must not interrupt the link's normal navigation.
+      console.warn('Meta Pixel event could not be queued.', error);
+    }
   });
 });
